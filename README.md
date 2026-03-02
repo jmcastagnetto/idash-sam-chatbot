@@ -85,7 +85,7 @@ install.packages(c(
 ### 1. Clone/Download the Project
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/jmcastagnetto/idash-sam-chatbot.git
 cd idash-sam-chatbot
 ```
 
@@ -162,6 +162,7 @@ idash-sam-chatbot/
 ├── validate_reqs.R              # Requisites validation, use by check_setup.sh
 ├── idash-sam-chatbot.Rproj      # RStudio project file
 ├── LICENSE                      # MIT license
+├── VERSION                      # Version tag
 └── README.md                    # This documentation
 ```
 
