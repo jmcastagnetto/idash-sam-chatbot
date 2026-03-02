@@ -1,0 +1,368 @@
+/* Custom CSS for IDASH SAM Chatbot */
+
+/* Main Container */
+.fillable-container {
+  background: rgba(255, 255, 255, 0.95);
+  margin: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Page content background */
+.page-fillable {
+  background: transparent;
+}
+
+/* Application Header */
+.app-header {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  margin: 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Chat Interface Styling */
+.chat-container {
+  height: calc(100vh - 200px) !important;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.welcome-message strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+#sam_chat {
+  width: 95% !important;
+}
+
+
+/* Message Styling */
+.chat-message {
+  margin: 0.75rem 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  max-width: 85%;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+
+/* User Messages */
+.chat-message.user {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  margin-left: auto;
+  text-align: right;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Assistant Messages */
+.chat-message.assistant {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #2c3e50;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Message Content */
+.chat-message strong {
+  color: inherit;
+}
+
+.chat-message code {
+  /* background: rgba(0, 0, 0, 0.1); */
+  background: #F0E68C;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+}
+
+/* Source Citations */
+.source-citation {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+.source-citation strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #664d03;
+}
+
+/* Error Messages */
+.error-message {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #721c24;
+}
+
+/* Loading/Thinking Indicator */
+.thinking-indicator {
+  background: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  color: #0d47a1;
+  font-style: italic;
+}
+
+/* Input Area */
+.chat-input-container {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #e9ecef;
+}
+
+.chat-input {
+  border-radius: 25px;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.chat-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none;
+}
+
+/* Application Footer */
+.app-footer {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Language Indicators */
+.language-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+.language-indicator.english {
+  background: #28a745;
+  color: white;
+}
+
+.language-indicator.spanish {
+  background: #fd7e14;
+  color: white;
+}
+
+.language-indicator.portuguese {
+  background: #20c997;
+  color: white;
+}
+
+/* Relevance Score Badges */
+.relevance-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.relevance-high {
+  background: #28a745;
+  color: white;
+}
+
+.relevance-medium {
+  background: #ffc107;
+  color: #212529;
+}
+
+.relevance-low {
+  background: #dc3545;
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .app-header p {
+    font-size: 0.9rem;
+  }
+
+  .chat-message {
+    max-width: 95%;
+    margin: 0.5rem 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .welcome-message {
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth Animations */
+.chat-message {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Tool Call Visualization */
+.tool-call {
+  background: #f0f8ff;
+  border-left: 4px solid #4169e1;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.9rem;
+}
+
+.tool-call-header {
+  font-weight: 600;
+  color: #4169e1;
+  margin-bottom: 0.25rem;
+}
+
+.tool-call-content {
+  color: #333;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+}
+
+/* Status Indicators */
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-online {
+  background: #28a745;
+  animation: pulse 2s infinite;
+}
+
+.status-offline {
+  background: #dc3545;
+}
+
+.status-connecting {
+  background: #ffc107;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+
+/* Tables */
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+.striped tr:nth-child(even) { background: #eee; }

@@ -1,0 +1,13 @@
+default:
+  kdb: "db/idash_sam_ragnar.duckdb"
+  sys_prompt_file: "_system_prompt.txt"
+  welcome_file: "_welcome.txt"
+  # local models ---
+  #model: "llama3.2:3b"
+  #model: "qwen2.5:3b"
+  #model: "qwen3:4b"
+  # cloude models ---
+  #model: "gpt-oss:120b-cloud"
+  #model: "glm-4.7:cloud"
+  model: "ministral-3:14b-cloud"
+  model_top_k: 5

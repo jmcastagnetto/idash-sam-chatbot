@@ -1,0 +1,17 @@
+**Welcome!**:
+I'm here to help you learn about Informatics and Data Science applied to
+Public Health and Health surveillance. I can provide answers based on verified
+educational materials and will always cite my sources.
+*You can ask questions in English, Spanish, or Portuguese.*
+
+**¡Bienvenido/a!**:
+Estoy aquí para ayudarte a aprender sobre informática y ciencia de datos aplicada
+a la Salud Pública y la Vigilancia en Salud. Puedo proporcionar respuestas
+basadas en materiales educativos verificados y siempre citaré mis fuentes.
+*Puedes hacer preguntas en inglés, español o portugués.*
+
+**Bem-vindo(a)!**:
+Estou aqui para ajudar você a aprender sobre Informática e Ciência de Dados
+aplicadas à Saúde Pública e à Vigilância em Saúde. Posso fornecer respostas com
+base em materiais educacionais verificados e sempre citarei minhas fontes.
+*Você pode fazer perguntas em inglês, espanhol ou português.*
