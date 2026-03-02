@@ -125,6 +125,7 @@ server <- function(input, output, session) {
   store <- tryCatch({
     setup_ragnar_store(kdb)
   }, error = function(e) {
+    print(e)
     # log error
     error(
       logger,
@@ -136,6 +137,10 @@ server <- function(input, output, session) {
                    type = "error", duration = 10)
     return(NULL)
   })
+  info(
+    logger,
+    "Connection to knowldege base successful"
+  )
 
   # Initialize Ollama chat client:
   # Establish connection to local Ollama server for LLM inference
@@ -152,6 +157,11 @@ server <- function(input, output, session) {
                    type = "error", duration = 10)
     return(NULL)
   })
+  info(
+    logger,
+    "Ollama client initialized successfully"
+  )
+
 
   # Register RAG retrieval tool if connections are successful:
   # Creates a custom tool for the LLM to search the knowledge base
@@ -201,7 +211,6 @@ server <- function(input, output, session) {
 
       # Register the custom tool
       chat$register_tool(rag_tool)
-
     }, error = function(e) {
       # log warning in tool registration
       warning(
@@ -213,6 +222,10 @@ server <- function(input, output, session) {
                       type = "warning", duration = 5)
     })
   }
+  info(
+    logger,
+    "RAG tool registered successfully"
+  )
 
   # Handle user messages
   # Processes incoming user queries, generates responses using RAG-enhanced LLM,
@@ -237,11 +250,6 @@ server <- function(input, output, session) {
         answer <- paste0(answer, txt)
       })
       chat_append("sam_chat", answer)
-      # log the answer
-      # answer <- ""
-      # loop(for (txt in stream) {
-      #   answer <- paste0(answer, txt)
-      # })
       info(
         logger,
         paste("Answer:", answer)
@@ -285,16 +293,16 @@ server <- function(input, output, session) {
   })
 
   # Add status indicator
-  output$status <- reactive({
-    if (is.null(store)) {
-      "Database: Disconnected"
-    } else if (is.null(chat)) {
-      "LLM: Disconnected"
-    } else {
-      "System: Ready"
-    }
-  })
-  outputOptions(output, "status", suspendWhenHidden = FALSE)
+  # output$status <- reactive({
+  #   if (is.null(store)) {
+  #     "Database: Disconnected"
+  #   } else if (is.null(chat)) {
+  #     "LLM: Disconnected"
+  #   } else {
+  #     "System: Ready"
+  #   }
+  # })
+  #outputOptions(output, "status", suspendWhenHidden = FALSE)
 }
 
 # Run the application:

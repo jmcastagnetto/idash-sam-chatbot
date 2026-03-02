@@ -15,20 +15,10 @@ initialize_ollama_chat <- function(sys_prompt, model) {
   tryCatch({
     response <- httr::GET("http://localhost:11434/api/tags", timeout = 5)
     if (httr::status_code(response) != 200) {
-      # log error
-      error(
-        logger,
-        paste("Ollama server is not responding")
-      )
       # stop and show error to user
       stop("Ollama server is not responding")
     }
   }, error = function(e) {
-    # log error
-    error(
-      logger,
-      paste("Cannot connect to Ollama server:", e$message)
-    )
     # stop and show error to user
     stop(paste("Cannot connect to Ollama server:", e$message))
   })
@@ -44,10 +34,6 @@ initialize_ollama_chat <- function(sys_prompt, model) {
       top_p = 0.9,
       seed = 42
     )
-  )
-  info(
-    logger,
-    "Ollama chat client initialized successfully"
   )
   return(chat)
 }
