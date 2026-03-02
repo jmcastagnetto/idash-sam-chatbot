@@ -1,3 +1,3 @@
 #! /bin/bash
 
-Rscript validate_setup.R
+Rscript validate_reqs.R

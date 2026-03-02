@@ -9,7 +9,8 @@ A Retrieval-Augmented Generation (RAG) chatbot built with R for Public Health an
 - **Local Processing**: Runs entirely locally using ollama for privacy and cost efficiency
 - **Source Citation**: Always cites the educational materials used in responses
 - **Educational Focus**: Specialized in Informatics and Data Science applied to Public Health, using the material from Workshop 1 of IDASH SAM (cohort 2)
-- **Modern UI**: Clean, responsive interface built with Shiny and shinychat
+- **Usable UI**: Clean, responsive interface built with Shiny and shinychat
+- **Logging**: Logging of sessions and responses
 
 ## 🏗️ Architecture
 
@@ -18,7 +19,7 @@ IDASH SAM RAG Chatbot
 ├── Frontend (shinychat)     # Chat interface
 ├── LLM Backend (ellmer)     # ollama integration
 ├── RAG Engine (ragnar)      # Retrieval from DuckDB
-└── Knowledge Base (DuckDB) # 32,244 pre-embedded chunks
+└── Knowledge Base (duckdb)  # 32,244 pre-embedded chunks
 ```
 
 ### Key Components
@@ -35,7 +36,7 @@ IDASH SAM RAG Chatbot
 - **R (4.3+)**: Latest R installation
 - **ollama**: Local LLM server running on port 11434
 - **8GB+ RAM**: Recommended for local LLM processing
-- **Storage**: ~1GB for database and models
+- **Storage**: 2GB+ for database and models
 
 ### Required R Packages
 
@@ -143,30 +144,32 @@ The application will open in your browser at `http://localhost:3838`
 
 ```
 idash-sam-chatbot/
-├── app.R                      # Main Shiny application
-├── config.yml                # Configuration file (model, database paths)
+├── app.R                        # Main Shiny application
+├── config.yml                   # Configuration file (model, database paths)
 ├── scripts/
-│   ├── setup_database.R       # Database connection functions
-│   ├── rag_tools.R            # RAG retrieval and processing
+│   ├── setup_database.R         # Database connection functions
+│   ├── rag_tools.R              # RAG retrieval and processing
 ├── www/
-│   ├── custom.css            # Application styling
-│   ├── idash_logo.png        # IDASH logo
-│   └── idash_logo_small.png   # Small IDASH logo
+│   ├── custom.css               # Application styling
+│   ├── idash_logo.png           # IDASH logo
+│   └── idash_logo_small.png     # Small IDASH logo
 ├── db/
-│   └── idash_sam_ragnar.duckdb  # Pre-populated knowledge base
-├── _system_prompt.txt         # Educational system prompt
-├── _welcome.txt              # Welcome message configuration
-├── check_setup.sh           # Bash script to check if everything is OK
-├── validate_setup.R         # System validation script used by check_setup.sh
-├── idash-sam-chatbot.Rproj  # RStudio project file
-└── README.md                # This documentation
+│   └── idash_sam_ragnar.duckdb  # Knowledge base (separate download)
+├── logs/                        # Directory for log files
+├── _system_prompt.txt           # Model system prompt
+├── _welcome.txt                 # Welcome message
+├── check_setup.sh               # Bash script to check if everything is OK
+├── validate_reqs.R              # Requisites validation, use by check_setup.sh
+├── idash-sam-chatbot.Rproj      # RStudio project file
+├── LICENSE                      # MIT license
+└── README.md                    # This documentation
 ```
 
 ## 🧠 Knowledge Base
 
 ### Database Contents
 
-- **Documents**: 227 educational materials
+- **Documents**: 227 training materials from workshop 1 of IDASH SAM
 - **Chunks**: 32,244 text segments
 - **Languages**: English, Spanish, Portuguese
 - **File Types**: PDFs (90), PowerPoint (77), Quarto (23), Word (21), HTML (16)
@@ -185,9 +188,9 @@ All content has been:
 
 ### Supported Languages
 
-1. **English**: Default language
-2. **Spanish**: Supported via LLM
-3. **Portuguese**: Supported via LLM
+1. **English**
+2. **Spanish**
+3. **Portuguese**
 
 ### Language Handling
 
