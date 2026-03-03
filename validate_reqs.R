@@ -18,8 +18,8 @@ required_files <- c(
   "app.R",
   "scripts/setup_database.R",
   "scripts/rag_tools.R",
-  "scripts/language_utils.R",
   "www/custom.css",
+  "www/idash_logo_small.png",
   "db/idash_sam_ragnar.duckdb"
 )
 
