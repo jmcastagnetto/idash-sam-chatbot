@@ -6,7 +6,7 @@ default:
   #model: "llama3.2:3b"
   #model: "qwen2.5:3b"
   #model: "qwen3:4b"
-  # cloude models ---
+  # cloud models ---
   #model: "gpt-oss:120b-cloud"
   #model: "glm-4.7:cloud"
   model: "ministral-3:14b-cloud"
