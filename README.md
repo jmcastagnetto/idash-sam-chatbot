@@ -44,7 +44,7 @@ IDASH SAM RAG Chatbot
 # Install CRAN packages
 install.packages(c(
   "shiny", "bslib", "htmltools",
-  "duckdb", "DBI", "httr", "jsonlite", 
+  "duckdb", "DBI", "httr", "jsonlite",
   "stringr", "config", "readr",
   "log4r", "coro",
   "ellmer", "ragnar", "shinychat"
@@ -54,29 +54,35 @@ install.packages(c(
 ### ollama Setup
 
 1. **Install ollama**:
-   
+
    ```bash
    # macOS/Linux
    curl -fsSL https://ollama.com/install.sh | sh
-   
+
    # Or follow instructions from from https://ollama.com
    ```
 
 2. **Start ollama Server**:
-   
+
    ```bash
    ollama serve
    ```
 
-3. **Pull Recommended Model**:
-   
+3. **Pull Required Embeding Model, and other models**:
+
    ```bash
-   # Current default model (configured)
-   ollama pull qwen2.5:3b
-   
-   # Alternative options 
+   # RAG embedding model (required)
+   ollama pull nomic-embed-text-v2-moe:latest
+
+   # Alternative get local models for chatbot
    ollama pull qwen2.5:7b
    ollama pull llama3.2:3b
+   ollama pull qwen3.5:4b
+   # Alternative cloud models for chatbot
+   # these require having an ollama account
+   ollama pull gpt-oss:20b-cloud
+   ollama pull glm-4.7:cloud
+   ollama pull ministral-3:14b-cloud
    # or any other model with tools support
    ```
 
