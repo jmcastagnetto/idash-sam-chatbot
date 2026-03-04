@@ -61,4 +61,4 @@ rsconnect/
 db/*.duckdb
 logs/*.json
 tmp/
-
+config.yml_local
