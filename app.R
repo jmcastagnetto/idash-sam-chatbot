@@ -27,7 +27,6 @@ library(httr)
 library(stringr)
 library(jsonlite)
 library(log4r)
-library(config)
 library(coro)
 
 # Setup today's log file in JSON format
