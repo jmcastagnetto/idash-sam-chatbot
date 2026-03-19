@@ -1,3 +1,5 @@
+## App components
+
 ```mermaid
 flowchart TB
     subgraph App["Main Application: app.R"]
@@ -44,6 +46,8 @@ flowchart TB
     ollama_init -->|API calls| ollama
 ```
 
+## Flow of query and response
+
 ```mermaid
 flowchart LR
     subgraph Input["User Input"]
@@ -71,6 +75,8 @@ flowchart LR
     generate --> response
     generate --> token_stats
 ```
+
+## General app organization
 
 ```mermaid
 mindmap
