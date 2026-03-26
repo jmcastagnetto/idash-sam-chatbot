@@ -24,11 +24,28 @@ CREATE TABLE fts_main_chunks.terms(
     termid BIGINT
 );
 
-CREATE TABLE documents(doc_id INTEGER DEFAULT(nextval('doc_id_seq')) PRIMARY KEY, origin VARCHAR UNIQUE, "text" VARCHAR);
+CREATE TABLE documents(
+    doc_id INTEGER DEFAULT(nextval('doc_id_seq')) PRIMARY KEY, 
+    origin VARCHAR UNIQUE, "text" VARCHAR
+);
 
-CREATE TABLE metadata(embedding_size INTEGER, embed_func BLOB, "name" VARCHAR, title VARCHAR);
+CREATE TABLE metadata(
+    embedding_size INTEGER, 
+    embed_func BLOB, 
+    "name" VARCHAR, 
+    title VARCHAR
+);
 
-CREATE TABLE embeddings(doc_id INTEGER, chunk_id INTEGER DEFAULT(nextval('chunk_id_seq')), "start" INTEGER, "end" INTEGER, context VARCHAR, embedding FLOAT[768], FOREIGN KEY (doc_id) REFERENCES documents(doc_id), PRIMARY KEY(doc_id, "start", "end"));
+CREATE TABLE embeddings(
+    doc_id INTEGER, 
+    chunk_id INTEGER DEFAULT(nextval('chunk_id_seq')), 
+    "start" INTEGER, 
+    "end" INTEGER, 
+    context VARCHAR, 
+    embedding FLOAT[768], 
+    FOREIGN KEY (doc_id) REFERENCES documents(doc_id), 
+    PRIMARY KEY(doc_id, "start", "end")
+);
 
 CREATE MACRO fts_main_chunks.match_bm25 (
     docname,
