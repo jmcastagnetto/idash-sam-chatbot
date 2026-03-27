@@ -2,8 +2,9 @@
 
 A Retrieval-Augmented Generation (RAG) chatbot built with R for Public Health and Data Science education. This chatbot provides intelligent responses based on verified educational materials from the IDASH workshop, supporting multiple languages (English, Spanish, Portuguese).
 
+## Watch the chatbot in action
 
-[![IDASH SAM chatbot in action](idash_sam_chatbot_screenshot.png)](idash_sam_chatbot_recording.mp4)
+[![IDASH SAM chatbot in action](idash_sam_chatbot_screenshot.png)](idash_sam_chatbot_recording.webp)
 
 
 ## 🎯 Features
