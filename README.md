@@ -4,7 +4,7 @@ A Retrieval-Augmented Generation (RAG) chatbot built with R for Public Health an
 
 ## Watch the chatbot in action
 
-[![IDASH SAM chatbot in action](idash_sam_chatbot_screenshot.png)](idash_sam_chatbot_recording.webp)
+![IDASH SAM chatbot in action](idash_sam_chatbot_recording.webp)
 
 
 ## 🎯 Features
