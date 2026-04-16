@@ -100,9 +100,9 @@ git clone https://github.com/jmcastagnetto/idash-sam-chatbot.git
 cd idash-sam-chatbot
 ```
 
-### 2. Verify Database
+### 2. Verify the Database
 
-Because the processed database is over the github limits (407MB), you
+Because the processed database is over the github limits (1.3GB), you
 need to get it from [my cloud storage](https://e.pcloud.link/publink/show?code=XZUNM3ZPlsek1kj7YYzVQv2kwv1HLnDyHN7)
 and save it in `db/idash_sam_ragnar.duckdb`.
 
@@ -111,7 +111,7 @@ using:
 
 ```bash
 $ sha256sum db/idash_sam_ragnar.duckdb
-13ff79c45ba3536ceeda9f67594316226f09d8b7a5d9194f488bd52663256b5c  db/idash_sam_ragnar.duckdb
+ce321ecbf1418d94ff5efac402c86918a3999234f687bb79a1521e4f31bd8acd  db/idash_sam_ragnar.duckdb
 ```
 
 Also, if you want to verify that you can connect to it using R console, you can use:
