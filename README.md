@@ -1,6 +1,6 @@
 # IDASH SAM RAG Chatbot
 
-A Retrieval-Augmented Generation (RAG) chatbot built with R for Public Health and Data Science education. This chatbot provides intelligent responses based on verified educational materials from the IDASH workshop, supporting multiple languages (English, Spanish, Portuguese).
+A Retrieval-Augmented Generation (RAG) chatbot built with R for Public Health Informatics and Data Science education. This chatbot provides intelligent responses based on verified educational materials from the workshops of the second cohort of the program: Informatics and Data Science for Health in South America (IDASH SAM). It supports multiple languages (English, Spanish, Portuguese).
 
 ## Watch the chatbot in action
 
@@ -13,7 +13,7 @@ A Retrieval-Augmented Generation (RAG) chatbot built with R for Public Health an
 - **Multilingual Support**: Responds in English, Spanish, or Portuguese via LLM
 - **Local Processing**: Runs entirely locally using ollama for privacy and cost efficiency
 - **Source Citation**: Always cites the educational materials used in responses
-- **Educational Focus**: Specialized in Informatics and Data Science applied to Public Health, using the material from Workshop 1 of IDASH SAM (cohort 2)
+- **Educational Focus**: Specialized in Informatics and Data Science applied to Public Health, using the material from Workshops 1 and 2 of IDASH SAM (cohort 2)
 - **Usable UI**: Clean, responsive interface built with Shiny and shinychat
 - **Logging**: Logging of sessions and responses
 
@@ -29,7 +29,7 @@ IDASH SAM RAG Chatbot
 
 ### Key Components
 
-1. **DuckDB Database**: Pre-populated with 227 educational documents (32,244 chunks)
+1. **DuckDB Database**: Pre-populated with 342 educational documents (42,064 chunks)
 2. **Vector Embeddings**: 768-dimensional embeddings for semantic search
 3. **Vector Search**: Fast similarity-based retrieval from DuckDB
 4. **Citation System**: Complete source attribution for all responses
@@ -41,7 +41,7 @@ IDASH SAM RAG Chatbot
 - **R (4.3+)**: Latest R installation
 - **ollama**: Local LLM server running on port 11434
 - **8GB+ RAM**: Recommended for local LLM processing
-- **Storage**: 2GB+ for database and models
+- **Storage**: 4GB+ for database and models
 
 ### Required R Packages
 
@@ -127,7 +127,7 @@ And you should get as output:
 
 ```
   count_star()
-1          227
+1          342
 ```
 
 ### 3. Start ollama
@@ -181,24 +181,24 @@ idash-sam-chatbot/
 
 ### Database Contents
 
-- **Documents**: 227 training materials from workshop 1 of IDASH SAM
-- **Chunks**: 32,244 text segments
+- **Documents**: 342 training materials from workshops 1 and 2 of IDASH SAM (cohort 2)
+- **Chunks**: 42,064 text segments
 - **Languages**: English, Spanish, Portuguese
-- **File Types**: PDFs (90), PowerPoint (77), Quarto (23), Word (21), HTML (16)
-- **Topic Focus**: IDASH Workshop 1 - Public Health and Data Science
+- **File Types**: PDFs (131), PowerPoint (117), Quarto (24), Word (51), HTML (19)
+- **Topic Focus**: IDASH Workshops 1 and 2 - Public Health Informatics and Data Science
 
 ### Content Quality
 
 All content has been:
 
+- Verified for educational quality
 - Pre-processed with 768-dimensional embeddings
 - Chunked for optimal retrieval
 - Indexed for semantic search
-- Verified for educational quality
 
 ## 🌍 Multilingual Features
 
-### Supported Languages
+### Supported Input Document Languages
 
 1. **English**
 2. **Spanish**
