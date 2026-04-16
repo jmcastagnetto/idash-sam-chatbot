@@ -3,11 +3,13 @@ default:
   sys_prompt_file: "_system_prompt.txt"
   welcome_file: "_welcome.txt"
   # local models ---
-  #model: "qwen2.5:3b"
+  #model: "qwen3.5:0.8b"
   #model: "qwen3:4b"
+  #model: "gemma4:e2b"
   #model: "qwen3.5:4b"
   # cloud models ---
-  model: "gpt-oss:120b-cloud"
+  #model: "gpt-oss:120b-cloud"
   #model: "glm-4.7:cloud"
-  #model: "ministral-3:14b-cloud"
-  model_top_k: 5
+  model: "ministral-3:14b-cloud"
+  #model: "gemma4:31b-cloud"
+  model_top_k: 10
