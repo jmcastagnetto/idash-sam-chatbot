@@ -103,7 +103,7 @@ cd idash-sam-chatbot
 ### 2. Verify the Database
 
 Because the processed database is over the github limits (1.3GB), you
-need to get it from [my cloud storage](https://e.pcloud.link/publink/show?code=XZUNM3ZPlsek1kj7YYzVQv2kwv1HLnDyHN7)
+need to get it from [my cloud storage](https://e.pcloud.link/publink/show?code=XZEt7iZupkt7Ym8iQ5NegHuc21bemLdUDly)
 and save it in `db/idash_sam_ragnar.duckdb`.
 
 You might want to verify that you downloaded the database correctly,
